@@ -1,0 +1,27 @@
+{
+  "title": { "en": "The Quantum Engineer", "fa": "مهندس کوانتومی" },
+  "subtitle": { "en": "From a Laptop to the Quantum Frontier", "fa": "از لپ‌تاپ تا مرز کوانتوم" },
+  "parts": [
+    { "id": "p01", "num": "I",   "file": "part-01.md", "title": { "en": "Entering the Quantum World", "fa": "ورود به دنیای کوانتوم" } },
+    { "id": "p02", "num": "II",  "file": "part-02.md", "title": { "en": "How to Think Like a Quantum Engineer", "fa": "چگونه مانند یک مهندس کوانتومی فکر کنیم" } },
+    { "id": "p03", "num": "III", "file": "part-03.md", "title": { "en": "Mathematical Foundations", "fa": "مبانی ریاضی" } },
+    { "id": "p04", "num": "IV",  "file": "part-04.md", "title": { "en": "Quantum Mechanics Without Drowning in Physics", "fa": "مکانیک کوانتوم بدون غرق‌شدن در فیزیک" } },
+    { "id": "p05", "num": "V",   "file": "part-05.md", "title": { "en": "Many Qubits", "fa": "کیوبیت‌های متعدد" } },
+    { "id": "p06", "num": "VI",  "file": "part-06.md", "title": { "en": "Quantum Circuits", "fa": "مدارهای کوانتومی" } },
+    { "id": "p07", "num": "VII", "file": "part-07.md", "title": { "en": "Quantum Algorithms", "fa": "الگوریتم‌های کوانتومی" } },
+    { "id": "p08", "num": "VIII","file": "part-08.md", "title": { "en": "Quantum Complexity", "fa": "پیچیدگی کوانتومی" } },
+    { "id": "p09", "num": "IX",  "file": "part-09.md", "title": { "en": "Noise: The Real Computer", "fa": "نویز: رایانهٔ واقعی" } },
+    { "id": "p10", "num": "X",   "file": "part-10.md", "title": { "en": "Quantum Error Correction", "fa": "تصحیح خطای کوانتومی" } },
+    { "id": "p11", "num": "XI",  "file": "part-11.md", "title": { "en": "Quantum Hardware", "fa": "سخت‌افزار کوانتومی" } },
+    { "id": "p12", "num": "XII", "file": "part-12.md", "title": { "en": "Quantum Computer Engineering", "fa": "مهندسی رایانهٔ کوانتومی" } },
+    { "id": "p13", "num": "XIII","file": "part-13.md", "title": { "en": "Quantum Applications", "fa": "کاربردهای کوانتومی" } },
+    { "id": "p14", "num": "XIV", "file": "part-14.md", "title": { "en": "Building a Research Capability", "fa": "ساختن توان پژوهشی" } },
+    { "id": "p15", "num": "XV",  "file": "part-15.md", "title": { "en": "AI × Quantum Computing", "fa": "هوش مصنوعی × محاسبات کوانتومی" } },
+    { "id": "p16", "num": "XVI", "file": "part-16.md", "title": { "en": "The Career", "fa": "مسیر شغلی" } },
+    { "id": "p17", "num": "XVII","file": "part-17.md", "title": { "en": "The Laboratory You Don't Have", "fa": "آزمایشگاهی که ندارید" } },
+    { "id": "p18", "num": "XVIII","file": "part-18.md","title": { "en": "Serious Projects", "fa": "پروژه‌های جدی" } },
+    { "id": "p19", "num": "XIX", "file": "part-19.md", "title": { "en": "The 5-Year Trajectory", "fa": "مسیر پنج‌ساله" } },
+    { "id": "p20", "num": "XX",  "file": "part-20.md", "title": { "en": "The Frontier", "fa": "مرز دانش" } },
+    { "id": "appx", "num": "",   "file": "appendices.md", "title": { "en": "Appendices", "fa": "پیوست‌ها" } }
+  ]
+}
