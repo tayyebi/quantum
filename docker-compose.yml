@@ -1,0 +1,15 @@
+services:
+  book:
+    # Stock base image — no custom Dockerfile, no pip dependencies (stdlib only).
+    # Default pulls from the AWS public mirror of Docker Hub (docker.io is blocked
+    # from some networks, e.g. Iran). On an unrestricted network you can use
+    # plain `python:3.12-alpine` instead:  BOOK_IMAGE=python:3.12-alpine docker compose up
+    image: ${BOOK_IMAGE:-public.ecr.aws/docker/library/python:3.12-alpine}
+    volumes:
+      - ./runtime:/app/runtime:ro
+      - ./docs:/app/docs:ro
+    working_dir: /app
+    command: python runtime/app.py
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
