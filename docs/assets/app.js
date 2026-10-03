@@ -91,9 +91,9 @@ function mdToHtml(md, alreadyEscaped) {
       out.push('<h' + lvl + '>' + inline(m[2]) + '</h' + lvl + '>'); i++; continue;
     }
     if (/^\s*(-{3,}|\*{3,})\s*$/.test(L)) { out.push('<hr>'); i++; continue; }
-    if (/^>\s?/.test(L)) {
+    if (/^(&gt;|>)\s?/.test(L)) {
       const body = [];
-      while (i < lines.length && /^>\s?/.test(lines[i])) body.push(lines[i++].replace(/^>\s?/, ''));
+      while (i < lines.length && /^(&gt;|>)\s?/.test(lines[i])) body.push(lines[i++].replace(/^(&gt;|>)\s?/, ''));
       out.push(renderCallout(body, true));
       continue;
     }
@@ -112,7 +112,7 @@ function mdToHtml(md, alreadyEscaped) {
     if (/^\s*$/.test(L)) { i++; continue; }
     const body = [];
     while (i < lines.length && !/^\s*$/.test(lines[i]) &&
-           !/^\s*(```|>|#{1,6}\s|[-*]\s|\d+[.)]\s)/.test(lines[i]) &&
+           !/^\s*(```|&gt;|>|#{1,6}\s|[-*]\s|\d+[.)]\s)/.test(lines[i]) &&
            !isCellRow(lines[i])) body.push(lines[i++]);
     if (body.length === 0 && i < lines.length) body.push(lines[i++]); // always make progress
     out.push('<p>' + inline(body.join(' ')) + '</p>');
