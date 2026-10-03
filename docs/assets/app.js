@@ -112,7 +112,9 @@ function mdToHtml(md, alreadyEscaped) {
     if (/^\s*$/.test(L)) { i++; continue; }
     const body = [];
     while (i < lines.length && !/^\s*$/.test(lines[i]) &&
-           !/^\s*(```|>|#{1,6}\s|[-*]\s|\d+[.)]\s|\|)/.test(lines[i])) body.push(lines[i++]);
+           !/^\s*(```|>|#{1,6}\s|[-*]\s|\d+[.)]\s)/.test(lines[i]) &&
+           !isCellRow(lines[i])) body.push(lines[i++]);
+    if (body.length === 0 && i < lines.length) body.push(lines[i++]); // always make progress
     out.push('<p>' + inline(body.join(' ')) + '</p>');
   }
   return out.join('\n');
@@ -134,9 +136,9 @@ function parsePart(raw) {
     if ((m = line.match(/^#\s+(.+)$/))) { part.title = m[1].trim(); bucket = part.intro; continue; }
     if ((m = line.match(/^##\s+(.+)$/))) {
       cur = { title: m[1].trim(), num: null, intro: [], sections: [] };
-      const nm = m[1].match(/^(\d+)\.\s*(.+)$/);
+      let nm = m[1].match(/^(\d+)\.\s*(.+)$/);
       if (nm) { cur.num = nm[1]; cur.title = nm[2].trim(); }
-      else if ((nm = m[1].match(/^Appendix\s+([A-Z])\s*[—–-]\s*(.+)$/i))) { cur.num = nm[1]; cur.title = nm[2].trim(); }
+      else if ((nm = m[1].match(/^(?:Appendix|پیوست)\s+([A-Z])\s*[—–-]\s*(.+)$/i))) { cur.num = nm[1]; cur.title = nm[2].trim(); }
       part.chapters.push(cur);
       bucket = cur.intro; sec = null; continue;
     }
@@ -315,7 +317,11 @@ async function viewPart(partId) {
   const lang = state.lang;
   showLoading();
   let part;
-  try { part = await loadPart(lang, partId); }
+  try {
+    part = await loadPart(lang, partId);
+    // load every part so chapter ordinals are global, not part-local
+    for (const meta of state.manifest.parts) await loadPart(lang, meta.id);
+  }
   catch (e) { showError(e); return; }
   const meta = state.manifest.parts.find(p => p.id === partId);
   const chItems = part.chapters.map(ch => {
