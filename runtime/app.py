@@ -271,6 +271,8 @@ def shell(lang: str, content: str, title: str, *, route=None, q: str = "") -> st
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'">
 <title>{esc(title)}</title>
 <link rel="icon" href="{FAVICON}">
 <link rel="stylesheet" href="/assets/style.css">
@@ -600,6 +602,12 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-cache")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Content-Security-Policy",
+                         "default-src 'none'; style-src 'self'; "
+                         "script-src 'self' 'unsafe-inline'; font-src 'self'; "
+                         "img-src 'self' data:; connect-src 'self'; "
+                         "form-action 'self'; base-uri 'none'; frame-ancestors 'none'")
         self.end_headers()
         self.wfile.write(body)
 
