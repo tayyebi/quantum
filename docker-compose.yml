@@ -11,5 +11,5 @@ services:
     working_dir: /app
     command: python runtime/app.py
     ports:
-      - "8080:8080"
+      - "5634:5634"
     restart: unless-stopped

@@ -18,7 +18,7 @@ engineering → research) and every experiment runs on a laptop.
 docker compose up
 ```
 
-Then open <http://localhost:8080> — English at `/en/`, Farsi at `/fa/`.
+Then open <http://localhost:5634> — English at `/en/`, Farsi at `/fa/`.
 No custom image is built: the compose file mounts this repository into the stock
 `python:3.12-alpine` base image and runs the stdlib-only server (`runtime/app.py`).
 No pip dependencies.
@@ -26,7 +26,7 @@ No pip dependencies.
 ### Plain Python (no Docker)
 
 ```bash
-python3 runtime/app.py        # serves on :8080 (override with PORT=...)
+python3 runtime/app.py        # serves on :5634 (override with PORT=...)
 ```
 
 ### Static / offline (no server needed for hosting)
@@ -35,7 +35,7 @@ The `docs/` folder is a self-contained static reader (vanilla HTML/CSS/JS, zero
 dependencies, no internet required) used for GitHub Pages:
 
 ```bash
-cd docs && python3 -m http.server 8080
+cd docs && python3 -m http.server 5634
 ```
 
 ## Layout

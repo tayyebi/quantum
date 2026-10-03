@@ -20,7 +20,7 @@ from urllib.parse import parse_qs, quote, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 CONTENT = DOCS / "content"
-PORT = int(os.environ.get("PORT", "8080"))
+PORT = int(os.environ.get("PORT", "5634"))
 
 MANIFEST = json.loads((CONTENT / "manifest.json").read_text(encoding="utf-8"))
 LANGS = ("en", "fa")
