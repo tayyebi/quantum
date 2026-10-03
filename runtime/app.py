@@ -527,8 +527,8 @@ class Handler(BaseHTTPRequestHandler):
         url = urlparse(self.path)
         path = quote(url.path)
         try:
-            if path == "/assets/style.css":
-                self._send((DOCS / "assets" / "style.css").read_bytes(), "text/css; charset=utf-8")
+            if path.startswith("/assets/"):
+                self._serve_asset(path[len("/assets/"):])
                 return
             if path == "/favicon.ico":
                 self._send(b"", "text/plain")
@@ -564,6 +564,24 @@ class Handler(BaseHTTPRequestHandler):
         except Exception as e:  # keep the server alive on any render error
             body = f"<h1>render error</h1><pre>{esc(repr(e))}</pre>"
             self._send(shell("en", body, "error").encode(), "text/html; charset=utf-8", 500)
+
+    def _serve_asset(self, rel: str):
+        """Serve static files from docs/assets/ (stylesheet, bundled fonts)."""
+        safe = (DOCS / "assets" / rel).resolve()
+        base = (DOCS / "assets").resolve()
+        if not str(safe).startswith(str(base)) or not safe.is_file():
+            self._send(b"not found", "text/plain", 404)
+            return
+        ctype = {
+            ".css": "text/css; charset=utf-8",
+            ".woff2": "font/woff2",
+            ".woff": "font/woff",
+            ".svg": "image/svg+xml",
+            ".png": "image/png",
+            ".js": "text/javascript; charset=utf-8",
+            ".txt": "text/plain; charset=utf-8",
+        }.get(safe.suffix.lower(), "application/octet-stream")
+        self._send(safe.read_bytes(), ctype)
 
     def _html(self, page, status=200):
         self._send(page.encode(), "text/html; charset=utf-8", status)

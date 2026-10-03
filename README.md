@@ -44,9 +44,15 @@ cd docs && python3 -m http.server 8080
   bilingual with RTL, search, dark/light theme. Standard library only.
 - `docs/content/{en,fa}/` — the book itself (Markdown, one file per part).
 - `docs/content/manifest.json` — catalog of parts and titles.
-- `docs/assets/` — shared stylesheet and the static (client-side) reader.
+- `docs/assets/` — shared stylesheet, the static (client-side) reader, and the
+  bundled Farsi font.
 - `docs/content/SPEC.md` — the content contract for contributors.
 - `PLAN.md` — the book's complete table of contents.
+
+**Fonts — fully local, no internet needed:** no webfont is ever fetched from a
+CDN. Latin text uses local system font stacks; Farsi text uses the **Sahel**
+font bundled at `docs/assets/fonts/` (SIL Open Font License 1.1 — see
+`docs/assets/fonts/OFL.txt`), served by the site itself.
 
 Both runtimes read the same content and stylesheet: the Python server renders pages
 server-side (pretty URLs like `/en/ch33`, form-based search); the static reader parses
