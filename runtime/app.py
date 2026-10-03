@@ -126,7 +126,6 @@ def md_to_html(md: str) -> str:
             out.append("<hr>"); i += 1; continue
         if QUOTE_RE.match(line):
             body = []
-            i += 1
             while i < n and QUOTE_RE.match(lines[i]):
                 body.append(QUOTE_RE.sub("", lines[i])); i += 1
             out.append(render_callout(body))
