@@ -4,6 +4,9 @@ Everything in this book converges here: a five-year schedule from where you sit 
 
 ## 73. Year 0–1 — Foundations
 
+> [!levels] In this chapter
+> **Lv1** you follow the year's curriculum: mathematics, quantum information, Qiskit, algorithms, simulation. **Lv2** you complete it at working pace alongside a job. **Lv3** the study converts into running code and passing tests. **Lv4** the year's projects meet professional standards and are public. **Lv5** the year-1 exit audit — read papers, debug circuits, predict distributions — passes honestly.
+
 **Theme:** the mathematics becomes native, the circuit model becomes reflex, and your first serious artifacts exist in public.
 
 **Mathematics** (months 0–4): Parts III in full — linear algebra to the eigendecomposition, complex numbers to comfort, probability to distributions-over-amplitudes. Working method: every concept instantiated at n=2 in numpy; the Ch. 52.5 discipline from day one. Milestone check: you can compute a tensor product, check unitarity, and diagonalize a Hamiltonian without notes.
@@ -19,6 +22,9 @@ Everything in this book converges here: a five-year schedule from where you sit 
 **Deliverable: 3–5 serious GitHub projects.** By month 12: the simulator (Project 1), the algorithm laboratory (Project 2, at least M1–M4), the noisy simulator (Project 3) begun or complete, plus two smaller public artifacts (reproducible notebooks, blog posts with code). All at Ch. 62.1's standards: they run, they're tested, they're documented. Year-1 exit self-audit: Ch. 59.8's first boxes ticked — can you read a paper's circuit (Ch. 52)? Can you debug someone's quantum code? Can you predict distributions before running? If yes, the foundation holds.
 
 ## 74. Year 1–2 — Specialization
+
+> [!levels] In this chapter
+> **Lv1** you survey the five specialization options and their target roles. **Lv2** you run the two-month informed exploration of each candidate. **Lv3** you commit to a spike with a written rationale and review date. **Lv4** the year produces one research-quality project in the spike. **Lv5** your specialization is legible to strangers from your GitHub alone.
 
 **Theme:** converge (Ch. 61) — choose the spike, go deep, and produce one research-quality build in it.
 
@@ -36,6 +42,9 @@ The choosing method is Ch. 61.6's evidence audit, not preference: artifact recor
 
 ## 75. Year 2–3 — Research
 
+> [!levels] In this chapter
+> **Lv1** you establish the two-papers-weekly reading practice with a claims matrix. **Lv2** you execute Project 6 reproductions with deviation ledgers. **Lv3** your OSS ladder reaches recognized contributor status. **Lv4** correspondence converts into real collaboration. **Lv5** the year delivers one research contribution that did not exist before you.
+
 **Theme:** enter the community — from consumer of research to contributor.
 
 **Papers** (the reading practice, now load-bearing): two papers weekly through Ch. 52's three-pass; maintain the claims matrix in your niche; by year-end you have the field map (Ch. 55.2) that makes gaps visible.
@@ -51,6 +60,9 @@ The choosing method is Ch. 61.6's evidence audit, not preference: artifact recor
 **Deliverable: research contribution.** One thing that did not exist before you: an extension of a reproduced paper, a tool adopted by others, a negative-result study with clean methodology, a benchmark finding — small is fine; *new and public* is mandatory. Ideal form: a workshop-paper-grade write-up or a merged, substantial OSS contribution that practitioners use. Year-3 exit audit: Ch. 59.8's checklist — all boxes except laboratory access; Ch. 63.11's dossier — thick with dated evidence; Ch. 63.12's network — real, with names. You are employable/contributable now; the remaining year is transition.
 
 ## 76. Year 3–5 — International Transition
+
+> [!levels] In this chapter
+> **Lv1** you map the two transition branches — degree path and industry path. **Lv2** you prepare applications and the evidence dossier. **Lv3** you execute the transition — admission or offer. **Lv4** you gain laboratory access and research infrastructure. **Lv5** the founding constraint is dissolved: daily work on real machines inside a research community.
 
 **Theme:** close the last gaps — credentials, hardware access, location — via the paths Ch. 63 mapped, choosing the branch that fits your evidence.
 
