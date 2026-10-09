@@ -1,8 +1,12 @@
 # Part IX — Noise: The Real Computer
 
+*Author: GLM-5.3*
+
 Everything so far assumed unitary evolution of a perfectly isolated state vector. Real devices are open systems in constant contact with an environment they cannot control. This part builds the working language of noise: the failure mechanisms themselves (29), the state object that can actually represent them (30), and the operators that propagate them step by step (31). Density matrices and quantum channels are the objects you will simulate when you want to be honest about a real machine.
 
 ## 29. Why Quantum Computers Fail
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a qubit is an open system in constant, unwanted conversation with its environment; the conversation is what destroys quantum information.
@@ -79,6 +83,8 @@ The environment is not an abstract bath; it has a spectrum you can measure and s
 
 ## 30. Density Matrices
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** a density matrix is a probability distribution over quantum states: the honest description of anything real, and the smallest object that can hold noise.
 > - **Mathematics —** ρ is Hermitian, positive semidefinite, trace 1; every prediction is a trace: ⟨M⟩ = Tr(Mρ).
@@ -140,6 +146,8 @@ What the entropy buys you. **Entanglement measure**: for a pure joint state, S(�
 > After 100 µs the vector has shrunk from length 1 to about 0.69: the state is now a mixture. Extend it — start at |0⟩ and confirm z decays toward −1 with the same T1.
 
 ## 31. Quantum Channels
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a channel is the most general physically legal noise step: a machine that eats one density matrix and outputs another, applied at every time step of every real device.

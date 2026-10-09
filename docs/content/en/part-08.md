@@ -1,8 +1,12 @@
 # Part VIII — Quantum Complexity
 
+*Author: GLM-5.3*
+
 You have now seen the algorithms — Deutsch, Grover, Shor, QFT, phase estimation. Before we turn to why hardware is hard, we owe the theoretical foundations an honest chapter: what complexity theory actually claims about quantum computers, what it does not, and where speedups genuinely come from. This is the part that protects you from the two symmetrical diseases of the field: hype ("quantum computers solve everything exponentially faster") and dismissiveness ("just parallel universes guessing"). Both die on contact with the material below.
 
 ## 27. Computational Complexity
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn P, NP, EXP, and why "polynomial" is the dividing line. **Lv2** you learn reductions and complexity classes as a map of the computational world. **Lv3** you place BQP on that map — inside PSPACE, containing factoring, with P's relationship genuinely open. **Lv4** you can read oracle separations and know exactly what they do and don't prove. **Lv5** you can articulate the open problems (BQP vs NP, the power of QMA, the status of factoring in P) the way a researcher would.
@@ -48,6 +52,8 @@ The field's main proof technology, and its most misused. An oracle O is a black-
 The negative results are as load-bearing as the positive ones. One: BQP ⊆ PSPACE — quantum computers do not beat *all* classical computation, only efficient classical computation. Two: no known speedup for NP-complete problems; Grover's quadratic is the ceiling for unstructured search, and BBBV says no quantum trick beats it. Three: no-cloning forbids "try all answers in parallel and read them out" — the misunderstanding underlying half of all overclaims. Four: P vs NP and P vs BQP remain open; Shor's algorithm is a pointer, not a proof. Five: sampling speedups rest on unproven complexity assumptions. Fluency in these five is your defense against both hype and its overcorrection.
 
 ## 28. Where Quantum Speedups Actually Come From
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you can name the sources: interference, amplitude amplification, hidden structure, sampling, simulation. **Lv2** you can trace each source in the algorithms of Part VII. **Lv3** you can predict, for a new problem, whether a quantum speedup is plausible — and justify the prediction. **Lv4** you can separate asymptotic from practical advantage, including the role of error-correction overhead. **Lv5** you can engage with the research frontier: dequantization (classical algorithms eating quantum claims), the search for new algorithmic primitives, and the open question of what BQP is really good for.

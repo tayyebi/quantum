@@ -1,8 +1,12 @@
 # Part X — Quantum Error Correction
 
+*Author: GLM-5.3*
+
 This is the part where quantum computing stops being a physics curiosity and becomes an engineering discipline. Error correction is why fault-tolerant machines are possible at all, why they are so expensive, and — for a software engineer — where the field's most hirable problems live. Everything here is buildable on a laptop.
 
 ## 32. The Fundamental Problem
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** quantum information is too fragile to store in one place and too slippery to copy; the only defense is to spread it out and watch for disturbances.
@@ -88,6 +92,8 @@ Correction is then a conditional Pauli. Two subtleties matter. First, the syndro
 
 ## 33. Simple Quantum Codes
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** spread one qubit over several, measure only parities, undo what the parities blame.
 > - **Mathematics —** codes are specified by their stabilizer generators and codewords; the notation [[n, k, d]] counts qubits, logical qubits, and correctable errors.
@@ -167,6 +173,8 @@ Computing on encoded data means applying unitaries that map the codespace to its
 
 ## 34. Stabilizer Formalism
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** a quantum code is a club: the stabilizers are membership tests, the errors are things that fail exactly those tests.
 > - **Mathematics —** commuting Pauli subgroups define codespaces; the whole theory is linear algebra over 2×2 binary vectors.
@@ -227,6 +235,8 @@ Hardware reads single qubits, not four-qubit Paulis, so generators are measured 
 The **normalizer** N(S) — Pauli strings commuting with every generator — contains S and, crucially, more: strings that act nontrivially on the codespace. These are the logical operators. Logical X̄ and Z̄ form an anticommuting pair per encoded qubit; multiplying them by stabilizers gives equivalent representatives. The **code distance** (code distance) d is the minimum weight (number of non-identity factors) of any element of N(S) \ S: the cheapest operator that acts as a logical gate yet looks like no error to the syndrome. It equals the number of errors the code can correct (⌊(d−1)/2⌋). Code design is now a precise optimization: maximize d per physical qubit while keeping generators local.
 
 ## 35. Surface Codes
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** qubits on a grid's edges, parity checks on its corners and squares; errors are little chains, and only chains that stretch across the whole grid hurt.
@@ -362,6 +372,8 @@ Each step in distance squares-and-a-half's the error. At p = 10⁻³ against p_t
 
 ## 36. Fault-Tolerant Quantum Computing
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** a correctable error is fine; a *spreading* error is not. Fault tolerance is the discipline of keeping errors from cascading while you compute.
 > - **Mathematics —** the threshold theorem: below a critical error rate, arbitrary precision costs only polylogarithmic overhead.
@@ -409,6 +421,8 @@ Concrete anchor: factoring RSA-2048. Gidney and Ekerå's 2019 estimate: ~20 mill
 Sum the costs. Qubit count: 2d² per logical qubit with d in the 20s–30s for serious algorithms. Factories: distillation and cultivation can consume the large majority of the machine. Time: every logical operation is interleaved with syndrome rounds, so the ~1 μs cycle time of superconducting hardware sets the wall clock; a week-long computation is ~10¹² rounds, each needing decode. I/O: every physical qubit wants its own control and readout line at millikelvin temperatures — wiring, not qubits, is often the harder systems problem. None of these is a single big fix; all are compounding constants. That is why "error-correction overhead" is named in Part I as the field's defining engineering problem, and why it hires.
 
 ## 37. Quantum Error Correction Engineering
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** QEC in the field is a real-time classical pipeline bolted to a quantum one: measure fast, decode faster, never fall behind.
@@ -479,6 +493,8 @@ Use stim as your reference oracle: build first with it, then replace components 
 The experiment behind every figure in this part: sweep physical error rate p and code distance d ∈ {3, 5, 7}; for each point run the memory experiment with a Monte Carlo loop of 10⁴–10⁶ shots; extract logical error per cycle; fit Λ and check the scaling against `A * (p/p_th)^((d+1)/2)`. Three things to look for in the data: the crossing point where curves for different d intersect (the threshold estimate), the vertical spacing between curves (Λ), and deviations at low p (the floor set by cosmic rays and bias — real experiments see it, simulations usually do not). Reproducing a Willow-style Λ ≈ 2 suppression plot from simulated data is a one-to-two-week laptop project and a legitimate portfolio piece — which is precisely the assignment below.
 
 ## Project — Implement a Surface-Code Simulator and Decoder
+
+*Author: GLM-5.3*
 
 Build the full QEC pipeline yourself, from noise to logical error curves, in Python with numpy only. External tools — stim, pymatching, sinter — are permitted *as oracles for validation and comparison*, never as the core: the point is that every number in your README is produced by code you understand line by line. This project is the level-3 (implementation) and level-4 (engineering) destination of Part X, and the strongest single piece of evidence you can put in a portfolio aimed at QEC roles.
 

@@ -302,6 +302,7 @@ def shell(lang: str, content: str, title: str, *, route=None, q: str = "") -> st
     <div class="side-foot">
       <a href="https://github.com/tayyebi/quantum" target="_blank" rel="noopener">GitHub</a>
       <span>·</span><span>© 2026 Tayyebi</span>
+      <span>·</span><span>Text: GLM-5.3</span>
     </div>
   </aside>
   <main id="main">

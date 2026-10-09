@@ -1,8 +1,12 @@
 # Part IV — Quantum Mechanics Without Drowning in Physics
 
+*Author: GLM-5.3*
+
 Everything a quantum engineer needs of quantum mechanics, expressed as postulates, a qubit, gates, and measurement — with numpy instead of derivations.
 
 ## 8. The Postulates
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** quantum mechanics is a small set of rules for storing, changing, and reading information in a system.
@@ -74,6 +78,8 @@ A **quantum channel** is the most general physically allowed evolution of a dens
 > The measurement postulate is the least settled part of the theory: why do unitary evolution and probabilistic collapse coexist, and can the transition be modeled dynamically? Decoherence theory (Zurek's environment-induced selection) explains the *appearance* of collapse for open systems, and interpretations from many-worlds to QBism agree on all laboratory predictions. As an engineer you can stay agnostic — the density-matrix/channel formalism is interpretation-independent — but adaptive-measurement and back-action-evading schemes (11.11) make the question practically relevant.
 
 ## 9. A Qubit
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a qubit is a unit vector with two complex components; direction on a sphere is the state, and phases encode information length cannot.
@@ -169,6 +175,8 @@ Every single-qubit gate is a **rotation** of the Bloch vector about some axis (u
 > The two-level qubit is a choice, not a law. **Qudits** (d-level systems) pack log₂ d bits of basis per carrier; **continuous-variable encodings** use oscillator modes with infinite-dimensional state spaces, and **cat qubits** engineer a two-level subspace inside an oscillator to suppress one error type. Each trades the clean 2×2 algebra of this chapter for denser, noisier structure. The open question — which encoding wins the full stack contest of overhead, control fidelity, and decodability — is unresolved and platform-dependent (Part XI).
 
 ## 10. Single-Qubit Gates
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** gates are rotations of the Bloch sphere; a handful of them, sequenced, reach any qubit state.
@@ -267,6 +275,8 @@ One distinction, stated sharply because it causes real bugs. **Global phase**: |
 > **Optimal gate synthesis**: given a target unitary and a fidelity budget, what is the shortest native-pulse sequence? Exact optimal synthesis over continuous sets is solved for one qubit, but with realistic constraints — leakage levels, pulse bandwidth, crosstalk, calibration drift — pulse-level compilation is open and platform-specific. Machine-learning pulse shapers and closed-loop optimization (GRAPE-family methods) compete with analytic constructions; neither dominates yet (Part XII).
 
 ## 11. Measurement
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** measurement is the only way information leaves the quantum system, and it disturbs what it reads.

@@ -1,8 +1,12 @@
 # Part XII — Quantum Computer Engineering
 
+*Author: GLM-5.3*
+
 Everything so far treated the quantum computer as an ideal machine. It is not, and the discipline of turning elegant circuits into instructions that survive real hardware is *quantum computer engineering* — compiler construction, scheduling, and optimization over a substrate with constraints no classical compiler has ever faced. This part is the natural home for a software engineer: the tools are the ones you already own (parsing, IRs, graph algorithms, cost functions, test suites), applied to the most interesting target architecture in computing. It ends with the part's defining project: your own toy quantum compiler.
 
 ## 44. From Algorithm to Hardware
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn what stands between a circuit diagram and machine execution: gate sets, connectivity, scheduling. **Lv2** you can name each constraint quantitatively (gate fidelity, coherence budget, coupling degree). **Lv3** you can decompose abstract gates into native ones and estimate the cost inflation. **Lv4** you understand pulse-level control as the layer beneath gates, and when it matters. **Lv5** you see the whole pipeline as a systems-design problem with interfaces — and know where its open research seams are.
@@ -40,6 +44,8 @@ Given a routed, native-gate circuit, produce a timeline: which gate starts when,
 Below gates live pulses: the actual waveforms (Gaussian-square flux tones, DRAG-corrected microwave envelopes) whose area and phase implement rotations. Qiskit exposes this layer (`pulse` schedules, now folding into the Qiskit Dynamics ecosystem), and it matters in three places: calibration (Rabi/Ramsey experiments *are* pulse experiments — Part XI), optimization (shorter/better pulses directly raise fidelity), and dynamical decoupling (XY4/CPMG pulse sequences inserted into idle periods cancel low-frequency noise — a compiler pass that runs physics, not algebra). You cannot touch hardware pulses from a laptop without an account, but Aer models their imperfection, and Chapter 17's simulator can, too. Pulse literacy separates serious compiler work from toy compilers.
 
 ## 45. Quantum Compilation
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you see a quantum compiler as the same animal as clang or rustc: front end → IR → passes → backend. **Lv2** you know the standard passes and their order. **Lv3** you understand the optimization passes' mathematics — cancellation, commutation, peephole rules — well enough to implement them. **Lv4** you can build a compiler with a pluggable pass manager and measure it (cost functions, 45.10). **Lv5** you know the research frontier: noise-adaptive compilation, ZX-based synthesis, compiler-correctness proofs for quantum code.
@@ -86,6 +92,8 @@ You cannot optimize what you cannot score. The menu, from cheap to honest: gate 
 
 ## 46. Quantum Transpilation
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you know transpilation as compilation specialized to re-targeting hardware. **Lv2** you can walk a circuit through Qiskit's preset pass managers and predict each stage's output. **Lv3** you implement the key algorithms yourself: SWAP routing, commutation analysis, peephole rewriting. **Lv4** you benchmark transpilers properly — same metric, same circuits, distributions not point estimates. **Lv5** you can evaluate the frontier: machine-learned pass selection, ZX-native compilation, and the fault-tolerant compiler stack (magic-state scheduling, lattice surgery compilation).
 
@@ -125,6 +133,8 @@ Make claims falsifiable. Protocol: fix a circuit corpus (BenchPress/QASMBench ar
 > Today's transpilation targets noisy physical qubits; the 2030 target is compilers for *logical* circuits running on error-corrected machines — a different beast: gates become lattice-surgery operations or magic-state injections (routed through distillation factories with their own traffic patterns), the "gate set" is {Cliffords, T via distillation, measurements}, and the cost function is spacetime volume of the code plus factory throughput. Open problems: compiling large T-count circuits into factory schedules without deadlock, ZX-calculus as the native IR for lattice surgery, and verifiable compilation — machine-checked proofs that the compiled logical circuit equals the source (Lean/Coq efforts are young). A compiler engineer entering now has a rare luxury: the classical-compiler playbook exists, the quantum targets are new, and almost nothing is settled.
 
 ## Project — Build a Toy Quantum Compiler
+
+*Author: GLM-5.3*
 
 **Goal.** An end-to-end compiler pipeline — parse → DAG IR → optimize → route to a coupling map → synthesize to a native gate set → benchmark — that measurably improves real circuits and is verifiably correct at every pass.
 

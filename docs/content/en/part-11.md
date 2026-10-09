@@ -1,8 +1,12 @@
 # Part XI — Quantum Hardware
 
+*Author: GLM-5.3*
+
 Above the hardware line — states, algorithms, codes — everything was abstraction. Here it stops: a quantum computer is a physical object built in a cleanroom or suspended in a vacuum, and every property you care about (fidelity, speed, scale) traces back to a physical mechanism and a physical limit. This part walks the real platforms: what the qubit physically is, what each design is good at, what it pays for it, and what you can actually reach from a laptop through cloud access today.
 
 ## 38. The Physical Quantum Computer
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a qubit is not an abstraction; it is an engineered physical system — a circuit, an atom, a photon — from which two states have been carved and isolated.
@@ -40,6 +44,8 @@ From a 50-qubit laboratory demonstration to 10⁶ qubits, wiring is the recurrin
 Every qubit needs its frequencies, pulse amplitudes, and readout discriminators calibrated — and recalibrated, because parameters drift (29.8). A large chip runs continuous automated calibration as a scheduling and optimization pipeline, consuming hours of machine time per day. This is also one of the most software-heavy parts of "hardware" companies: calibration is a classical control loop wrapped around an analog quantum system, and teams that build it look a lot like robotics teams. As a remote user you see the outputs — per-qubit, per-gate error rates published daily. Study those pages before running anything: they are the most honest performance data in the industry.
 
 ## 39. Superconducting Qubits
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** an LC circuit cooled until it behaves quantum-mechanically, with a nonlinear element that makes its two lowest levels individually addressable.
@@ -82,6 +88,8 @@ The platform's characteristic engineering disease. Qubits share control lines, r
 
 ## 40. Trapped-Ion Quantum Computing
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** single atoms suspended in electromagnetic traps, qubits in internal atomic states, lasers doing everything: nature-made, defect-free qubits.
 > - **Mathematics —** RF Paul traps confine ions; shared quantized motion (phonons) mediates Mølmer–Sørensen entangling gates.
@@ -123,6 +131,8 @@ One chain shares one motional bus, and modes crowd together as ions are added �
 
 ## 41. Neutral Atoms
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** single neutral atoms held by focused laser light in reconfigurable 2D arrays; excite an atom to a huge Rydberg orbit and it blocks its neighbors — that is your gate.
 > - **Mathematics —** Rydberg blockade: one excited atom shifts nearby atoms' levels out of resonance, giving a strong, long-range, controllable nonlinearity.
@@ -159,6 +169,8 @@ Connectivity is defined in software, per run: triangular, square, Kagome, or mul
 The headline is atom count: thousands of physical qubits already exist, scaling by optically engineering larger arrays — there is no wiring wall like 39.5. The debts are equally concrete: two-qubit fidelity must roughly double its nines to reach ion class; atoms are lost during operation and must be detected and replaced mid-circuit, an unsolved systems problem at speed; laser, imaging, and vacuum systems grow complex with array size; and readout crosstalk across dense arrays needs management. Both landmark events of 2023–24 — analog advantage-class sampling (41.4) and logical-qubit demonstrations (41.6) — happened on this platform first. Its ceiling is genuinely unknown, which cuts both ways.
 
 ## 42. Photonic Quantum Computing
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** qubits made of light: photons rarely interact with anything, so they are perfect messengers and terrible collaborators — the platform's genius and its problem are the same fact.
@@ -200,6 +212,8 @@ The platform's native benchmark: send m indistinguishable photons through a larg
 The error model is loss-dominated, so photonic QEC differs in kind from Part IX's models: use codes tolerant to erasure (you know *where* the photon was lost) and encode in states that fight loss directly. GKP qubits — grid states in an optical mode — were demonstrated with error correction on a photonic chip by Xanadu (2024), a below-threshold claim at small scale. Fusion-based fault tolerance (PsiQuantum) interconnects small resource states into a large code with loss tolerance built into the stitching. The resource arithmetic is unlike any other platform: millions of components, driven by the probability calculus of probabilistic gates (42.5). The bet is explicit — semiconductor fabs, not new physics, will close that gap.
 
 ## 43. Other Architectures
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** the big four do not exhaust the design space: spins in silicon, topological protection, and stabilized oscillator states attack the same problem from below, sideways, and above.

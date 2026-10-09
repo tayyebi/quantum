@@ -1,8 +1,12 @@
 # Part I — Entering the Quantum World
 
+*Author: GLM-5.3*
+
 Before mathematics, before code, before hardware: an honest map of what quantum computing is, what it is not, and why a software engineer should care enough to spend years on it.
 
 ## 1. Why Quantum Computing?
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a quantum computer is not a faster classical computer; it is a machine that computes by steering interference of probability amplitudes.

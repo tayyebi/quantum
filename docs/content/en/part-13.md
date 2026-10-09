@@ -1,8 +1,12 @@
 # Part XIII — Quantum Applications
 
+*Author: GLM-5.3*
+
 Algorithms in the abstract are one thing; applications that survive contact with data, noise, and economics are another. This part examines the five application families with real momentum — simulation, chemistry, variational methods, machine learning, cryptography — with the honesty each deserves: some are roadmap bets (simulation, chemistry at fault-tolerant scale), some are contested (variational, QML), and one is already deployed at civilizational scale (cryptography — as defense). Throughout, the method is the same: for every claimed application, ask who pays, for what precision, against which classical baseline.
 
 ## 47. Quantum Simulation
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you understand Feynman's argument: simulating quantum systems classically costs exponentially; quantum machines do it natively. **Lv2** you learn Hamiltonians, time evolution, and Trotterization as working tools. **Lv3** you can build and run small simulations (spin chains, H₂) on your laptop. **Lv4** you can estimate resource costs for real targets and know the fault-tolerant thresholds involved. **Lv5** you know the research frontier: qubitization, qDRIFT, analog-digital hybrids, and the verification of simulations against real materials data.
@@ -36,6 +40,8 @@ Electrons are fermions: antisymmetric under exchange, which makes their Hilbert 
 End to end: molecular geometry → basis set → integrals → second-quantized Hamiltonian → fermion-to-qubit mapping → circuit → energy. Every step has knobs and costs: basis size sets qubit count (H₂ in a minimal basis: 4 qubits; FeMoco, nitrogenase's active site, the famous target: ~100+ logical qubits with 10⁹–10¹⁰ T gates in modern estimates — millisecond-scale evolution on a fault-tolerant machine). Interim landmarks that exist *today*: exact simulation of H₂/LiH on simulators, analog-digital experiments on hardware. This section's experiment: reproduce the H₂ dissociation curve (Ch. 48's pipeline) on your laptop — the entire application stack, miniaturized, verifiable against textbook chemistry.
 
 ## 48. Quantum Chemistry
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn what chemists want: ground-state energies, reaction barriers, accurate enough for design. **Lv2** you learn the encoding pipeline: orbitals → fermions → qubits. **Lv3** you implement Jordan–Wigner and run VQE on H₂. **Lv4** you can compare encodings (JW vs BK vs parity) and estimate fault-tolerant resources for a real molecule. **Lv5** you know the honest state of the field: what's proven, what's promised, and the gap in between.
@@ -73,6 +79,8 @@ NISQ's answer to deep circuits: don't implement e^(−iHt) or QPE — *search* f
 The endgame comparison. Fault-tolerant path: prepare an approximate ground state (adiabatic/state prep), run QPE, get E₀ to chemical accuracy with *provable* guarantees — cost: 10⁹–10¹⁰ T gates, ~100–1000 logical qubits for FeMoco-class targets (2020s estimates, still falling). NISQ path: VQE with error mitigation (Ch. 31) — no proofs, ~10⁻¹–10⁻² Hartree accuracy at best, small molecules. Classical baseline: coupled cluster CCSD(T) ("gold standard") is exact-ish for weakly correlated systems and fails exactly where quantum wants to win (strong correlation, bond stretching, transition metals). The field's honest framing: quantum chemistry is *the* application — most-likely-first use of a fault-tolerant machine — and everything before that machine exists is infrastructure-building. You are allowed to be excited and patient at once.
 
 ## 49. Variational Quantum Algorithms
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you understand the hybrid loop: quantum evaluates, classical optimizes. **Lv2** you can run VQE and QAOA on simulators end-to-end. **Lv3** you can diagnose and mitigate the failure modes: barren plateaus, noise-induced bias, measurement overhead. **Lv4** you can design ansätze and choose optimizers for a given problem class, with evidence. **Lv5** you can critically evaluate the literature — which variational claims survive 2024–25 scrutiny (trainability and noise results were brutal) and where the idea may still pay off (error-corrected hardware, quantum-native targets).
@@ -115,6 +123,8 @@ The quiet killer. Estimating E(θ) = Σₖ hₖ⟨Pₖ⟩ requires estimating ea
 
 ## 50. Quantum Machine Learning
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you can name the four things "quantum machine learning" actually denotes — and know which one most papers mean. **Lv2** you can run feature-map classifiers and quantum kernels on simulators. **Lv3** you understand the structural obstacles: data loading, barren plateaus, dequantization. **Lv4** you can design an honest comparison against classical baselines — and report one. **Lv5** you can engage the research frontier: what QML would need to matter, and which niches (quantum data!) are scientifically live today.
 
@@ -155,6 +165,8 @@ The protocol, because you will need it: (1) fix dataset and split *first*; (2) e
 The synthesis discipline. Claims to refuse: "quantum computers will revolutionize AI" (no mechanism known), "exponential speedups for machine learning" (dequantized or data-loading-caveated), "QNNs are like brains" (no). Claims to take seriously: quantum methods for *quantum* data (state learning, verification — live research), ML *for* quantum engineering (decoders! Ch. 37's neural decoders are real and shipping), and QML as a theory program clarifying what learning means without cloning or efficient classical simulation. Career guidance embedded: the engineers most valuable to QML teams are those who can *build the classical infrastructure and the honest baselines* — a job description that matches exactly the skills this book has been building.
 
 ## 51. Quantum Cryptography
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you know which cryptography quantum computers threaten (RSA, ECC) and which they don't (AES, SHA, lattices — with adjustments). **Lv2** you understand the mechanism: Shor breaks factoring/discrete log; Grover halves symmetric security. **Lv3** you understand QKD — BB84 and E91 — as physics, including its real limitations. **Lv4** you can navigate post-quantum cryptography: the NIST standards, their tradeoffs, migration mechanics. **Lv5** you can plan and audit a crypto-agility migration — the application area where quantum computing is *changing the world right now*.

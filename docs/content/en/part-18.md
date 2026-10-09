@@ -1,8 +1,12 @@
 # Part XVIII — Serious Projects
 
+*Author: GLM-5.3*
+
 Knowledge you can't defend with code is a rumor about yourself. This part is the book's forge: seven projects, escalating in ambition, that convert everything you've read into artifacts — the portfolio Chapter 62 told you to build, the evidence Chapter 63 told you to document, the apprenticeship Chapter 59 told you to complete. Projects 1–5 you have already *studied* (Parts VI, VII, IX, X, XII designed them); here they get full build specifications with milestones and acceptance criteria. Project 6 is your first research act. Project 7 is the real one: something nobody told you to build.
 
 ## 66. Project 1 — Quantum Simulator
+
+*Author: GLM-5.3*
 
 > [!levels] In this project
 > **Lv1** you build a working state-vector engine with gates and measurement. **Lv2** you make it fast (tensor contraction) and complete (parser, sampling, CLI). **Lv3** you verify it against Qiskit and against hand-computed physics. **Lv4** you characterize its limits — memory, time, the exponential wall — empirically. **Lv5** you extend it beyond spec: sparse or stabilizer engines, noise channels — and know exactly why each extension is hard.
@@ -19,6 +23,8 @@ Knowledge you can't defend with code is a rumor about yourself. This part is the
 
 ## 67. Project 2 — Quantum Algorithm Laboratory
 
+*Author: GLM-5.3*
+
 > [!levels] In this project
 > **Lv1** you implement the early algorithms correctly and verify their guarantees. **Lv2** you implement QFT, phase estimation, and Shor end-to-end with correct statistics. **Lv3** you validate every algorithm against theory — deterministic, probabilistic, and scaling behavior. **Lv4** you study noise impact: which algorithms survive, which die, at what error rate. **Lv5** you understand each algorithm's resource structure well enough to estimate costs for bigger instances than you can run.
 
@@ -33,6 +39,8 @@ Knowledge you can't defend with code is a rumor about yourself. This part is the
 **What it proves.** Part VII internalized at the level where you could debug someone else's algorithm implementation. Effort: 3–4 weekends.
 
 ## 68. Project 3 — Noisy Quantum Simulator
+
+*Author: GLM-5.3*
 
 > [!levels] In this project
 > **Lv1** you implement the canonical noise channels as Kraus operators and apply them correctly. **Lv2** you build density-matrix evolution and verify mixed-state physics. **Lv3** you validate against theory: decay curves, depolarization rates, measurement-error matrices. **Lv4** you match real-device behavior using published calibration data. **Lv5** you understand the boundary — what your channel models can and cannot capture about real hardware.
@@ -49,6 +57,8 @@ Knowledge you can't defend with code is a rumor about yourself. This part is the
 
 ## 69. Project 4 — Error Correction Laboratory
 
+*Author: GLM-5.3*
+
 > [!levels] In this project
 > **Lv1** you implement the repetition and small codes with correct syndrome extraction. **Lv2** you build decoders and measure logical error rates. **Lv3** you demonstrate the threshold effect — logical error falling with code distance under circuit noise. **Lv4** you implement surface-code memory experiments at d=3,5 with real decoding. **Lv5** you can design syndrome-extraction circuits and diagnose decoder failures — the working skills of Ch. 60.5's hottest job.
 
@@ -64,6 +74,8 @@ Knowledge you can't defend with code is a rumor about yourself. This part is the
 
 ## 70. Project 5 — Quantum Compiler
 
+*Author: GLM-5.3*
+
 > [!levels] In this project
 > **Lv1** you build parser → DAG → native-gate output, correct by construction. **Lv2** you implement optimization passes with measured improvements. **Lv3** you implement routing on a real coupling map with layout tracking. **Lv4** you benchmark against Qiskit honestly — distributions, seeds, and a written comparison. **Lv5** you extend into the open territory: noise-aware passes, commutation analysis, ZX rewrites — one research-grade pass of your own.
 
@@ -78,6 +90,8 @@ Knowledge you can't defend with code is a rumor about yourself. This part is the
 **What it proves.** Part XII plus the systems-engineering maturity to build a tool *stack*, verified at every layer. This project plus Project 4 is a complete entry-level portfolio for Ch. 60.4 and 60.5 roles. Effort: 4–6 weekends.
 
 ## 71. Project 6 — Reproduce a Research Paper
+
+*Author: GLM-5.3*
 
 > [!levels] In this project
 > **Lv1** you extract a paper's algorithm into a written specification. **Lv2** you implement it from your spec, not their code. **Lv3** you reproduce the key figure within honest statistical bounds. **Lv4** you document deviations rigorously — the deviation ledger as a scientific artifact. **Lv5** you publish the reproduction and engage the authors — your first act inside the research community.
@@ -97,6 +111,8 @@ paper → mathematical model → implementation → simulation → experiment �
 **What it proves.** Chapter 53's pipeline executed end-to-end — you have done research-cycle work: extraction, independent implementation, statistical comparison, and public, accountable communication. This is the project that converts "knows quantum computing" into "does quantum research." Effort: 3–5 weekends.
 
 ## 72. Project 7 — Find Something Nobody Told You to Build
+
+*Author: GLM-5.3*
 
 > [!levels] In this project
 > There are no levels. This is the level.

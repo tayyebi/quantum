@@ -1,8 +1,12 @@
 # Part III — Mathematical Foundations
 
+*Author: GLM-5.3*
+
 Everything a quantum engineer needs from undergraduate mathematics, rebuilt for a programmer: complex numbers, linear algebra, tensor products, probability, and numerical computation — each with an implementation you can run today and a statement of where it breaks on real hardware.
 
 ## 3. Mathematical Language
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** quantum states are vectors of complex numbers; all the "weirdness" is arithmetic on those vectors.
@@ -132,6 +136,8 @@ Dirac's bra-ket notation packages everything above into quantum computing's nati
 
 ## 4. Matrices
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** a matrix is a machine that takes a vector in and hands a vector out; in quantum computing it is a gate or an evolution.
 > - **Mathematics —** matrix algebra, the conjugate transpose, and the unitary and Hermitian conditions that define quantum operations and observables.
@@ -260,6 +266,8 @@ The matrix exponential deserves its own section because e^{A} is the single most
 
 ## 5. Tensor Products
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** combining two systems multiplies their possibility spaces; the tensor product is the arithmetic of "and" for quantum states.
 > - **Mathematics —** Kronecker products, composite dimensions 2^{n+m}, separable versus entangled states, and partial traces.
@@ -371,6 +379,8 @@ The full state vector stores 2ⁿ amplitudes; a tensor network stores instead a 
 
 ## 6. Probability and Statistics
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** a quantum computer is a random-number generator with engineered biases; the engineer's job is to estimate those biases honestly.
 > - **Mathematics —** distributions, expectation, variance, and the √(1/N) scaling that governs every measurement ever taken.
@@ -467,6 +477,8 @@ The closing synthesis: quantum mechanics makes statistics unavoidable, not incid
 ---
 
 ## 7. Numerical Computation
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** computers approximate mathematics; every simulation result is an answer to a slightly different question than you asked.

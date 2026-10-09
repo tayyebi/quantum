@@ -61,14 +61,15 @@ Cover **every** subsection PLAN.md lists for your chapters. You may group 2–4 
 
 Direct, concrete, engineering-first. The reader is a professional software engineer: no dumbing down, no hype, no inspiration-speak. Prefer "here is the mechanism, here is the limitation, here is what to build" over adjectives. Use short code examples over long ones. State quantities and units when claiming things.
 
-## Persian file (`fa`)
+## Persian files (`fa`) — currently placeholders
 
-- A faithful, natural translation of the EN file — same structure, same callouts, same code blocks (code comments may stay English).
-- Use ZWNJ (نیم‌فاصله, U+200C) correctly: می‌شود، برهم‌نهی، کیوبیت‌ها، رایانهٔ.
-- Persian punctuation: ، ؛ « » and Persian question mark ؟.
-- On first use of a technical term, give the English in parentheses: برهم‌نهی (superposition).
-- Keep code, gate names (H, CNOT, T), and well-known algorithm names in Latin script; transliterate person names (شور، گروور) with the Latin name in parentheses on first use.
-- Numbers inside formulas stay Western digits; Persian digits are fine in prose.
+- The Persian edition is **not yet published**. Every `content/fa/*.md` file is a placeholder: the Farsi part title as H1, the author byline, and a `[!note]` callout telling the reader the Persian text is pending and to switch to English via the sidebar button.
+- **Do not machine-translate parts into Farsi.** The earlier machine translation was removed; placeholders stay until a reviewed translation replaces them.
+- When a real translation lands, it must follow the original contract: faithful natural translation of the EN file — same structure, same callouts, same code blocks; correct ZWNJ (نیم‌فاصله, U+200C: می‌شود، برهم‌نهی، کیوبیت‌ها، رایانهٔ); Persian punctuation ، ؛ « » و ؟; the English term in parentheses on first use (برهم‌نهی (superposition)); code, gate names (H, CNOT, T) and algorithm names in Latin script; transliterated person names with the Latin name on first use (شور (Shor)); Western digits inside formulas, Persian digits fine in prose.
+
+## Authorship
+
+- All current content was authored by **GLM-5.3** (AI agent, ZCode). Every content file carries the byline `*Author: GLM-5.3*` directly under its H1, and under every `##` chapter heading — keep that byline on rewritten or newly generated pages.
 
 ## Verification before you finish
 

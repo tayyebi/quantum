@@ -1,8 +1,12 @@
 # Part V — Many Qubits
 
+*Author: GLM-5.3*
+
 Composite systems, entanglement, and multi-qubit gates: where the exponential state space appears, where the classical simulators start dying, and where quantum computing starts earning the word "quantum".
 
 ## 12. Composite Quantum Systems
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** combining qubits multiplies their possibilities; some combined states have no description "per qubit" at all.
@@ -86,6 +90,8 @@ Sharpen the distinction with numbers, because it is the conceptual heart of Part
 > **Entanglement quantification**: for two qubits there is one entropy measure; for three or more, entanglement splits into inequivalent classes (GHZ-type versus W-type) with no single agreed measure, and for mixed states the classification is largely open — this matters because noisy hardware only produces mixed states (13.9). Related open problem: certifying entanglement and randomness in devices you do not trust — device-independent certification — the foundation of commercial quantum-randomness services running today.
 
 ## 13. Entanglement
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** entangled systems share one joint description; measuring one shapes the statistics of the other, and no local recipe explains it.
@@ -183,6 +189,8 @@ Is entanglement *necessary* for quantum speedup? Mostly yes, with a famous excep
 > Open and active: **entanglement distillation** — converting many noisy pairs into fewer clean ones, with known protocols needing 10²–10⁴ raw pairs per clean pair at realistic fidelities; **quantum networks** — repeaters with quantum memories whose storage times remain seconds-to-minutes against needed hours; and the **complexity-entanglement connection** — exactly which entanglement structures separate simulable from hard states, the boundary tensor-network methods (MPS, PEPS) walk along. This is one of the few frontiers where a laptop experiment can genuinely contribute (Part XIX).
 
 ## 14. Multi-Qubit Gates
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** multi-qubit gates create and move entanglement; the controlled-NOT is the "if-then" of quantum logic.

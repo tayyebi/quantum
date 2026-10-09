@@ -1,8 +1,12 @@
 # Part XIV — Building a Research Capability
 
+*Author: GLM-5.3*
+
 Everything before this part made you a competent quantum engineer. This part makes you a researcher — not by granting permission, but by installing the working habits: reading papers the way scientists do, reproducing results the way engineers do, designing experiments the way experimentalists do, and finding problems the way independent thinkers do. None of this requires a laboratory, a supervisor, or an affiliation. It requires a laptop, discipline, and the standards you are about to acquire. This is also the part of the book most transferable from your software career: you already know code review, testing, and reproducibility culture; here they become research method.
 
 ## 52. How to Read Quantum Papers
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn to find papers (arXiv, journals) and read them in the right order. **Lv2** you master the three-pass method and can extract a paper's claim in 20 minutes. **Lv3** you can decode dense mathematical notation and experimental sections on your own. **Lv4** you can identify the actual contribution — and separate novelty from implementation quality. **Lv5** you read critically enough to spot oversold claims, missing baselines, and the questions a paper quietly avoids.
@@ -52,6 +56,8 @@ The field's most confounded distinction. Novelty: an idea that didn't exist — 
 
 ## 53. Reproducing Research
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you understand why reproduction is the entry ticket to research credibility. **Lv2** you can select a reproducible paper and extract its algorithm. **Lv3** you can rebuild an experiment and match reported results within honest statistical bounds. **Lv4** you can document deviations rigorously and publish a reproduction others can build on. **Lv5** you see reproduction as a research program in itself — the field's known replication gaps are open territory.
 
@@ -91,6 +97,8 @@ Reproductions are publishable and increasingly valued: venues welcome them (ReSc
 > Concrete starter target: reproduce the benchmark table of the SABRE routing paper (Li et al., ASPLOS 2019) or any recent transpiler comparison's relative-depth column on Qiskit's `transpile` at optimization levels 0–3, using the same benchmark circuits from a public repo (QASMBench). Everything is simulator-side: coupling maps are public, no hardware needed. Deliverables: one-command repo, seed-distributed results (≥20 seeds, medians + IQR), and a deviation ledger. Time: two weekends. Result: you will have independently verified (or refuted) a claim that appears in every quantum engineering talk — with receipts.
 
 ## 54. Designing Experiments
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn the anatomy of an experiment: hypothesis, baseline, variables, statistics. **Lv2** you can design a controlled quantum experiment on simulator or hardware. **Lv3** you can choose and justify noise models and simulator-vs-hardware decisions. **Lv4** you can make results reproducible — seeds, tracking, pre-registration — at professional standards. **Lv5** you design experiments whose outcomes are informative whichever way they land, the hallmark of mature research taste.
@@ -139,6 +147,8 @@ Scale demands tooling: at more than a handful of runs, track experiments the way
 > Take any claim from Part XIII you found suspicious (a QML accuracy number, a QAOA approximation ratio). Write, before touching code: hypothesis with threshold; baselines (ideal + naive + standard + classical); variable table (fixed/studied); regime and noise model with falsifier; repetition plan (seeds, shots); statistical test; and the figure you will draw. Then run it at simulator scale. Two outcomes are wins: the claim survives your design (you've verified something real), or it doesn't (you've found something interesting). Only one outcome is a loss: not writing the design first.
 
 ## 55. Finding Research Problems
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn where problems come from: open-problem lists, literature gaps, and your own friction. **Lv2** you can scan the literature for gaps systematically. **Lv3** you can convert engineering bottlenecks you hit into well-posed problems. **Lv4** you can size a problem — tractable-with-laptop versus needs-a-lab — and pick accordingly. **Lv5** you develop taste: problems whose solutions matter regardless of how hardware evolves, the strategic skill of a research career.

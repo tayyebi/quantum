@@ -1,8 +1,12 @@
 # Part VI — Quantum Circuits
 
+*Author: GLM-5.3*
+
 With the mental model (Part II), the mathematics (Part III), the physics (Part IV), and multi-qubit states (Part V) in place, we can finally speak the working language of the field: the quantum circuit. Circuits are to quantum computing what assembly is to classical machines — low-level, universal, and the lingua franca of every paper, SDK, and hardware manual. This part has three movements: the notation itself (Ch. 15), the practice of programming with it in Qiskit (Ch. 16), and the rite of passage every serious quantum engineer should complete — building a state-vector simulator from scratch (Ch. 17). Everything in Parts VII–XIII assumes fluency here.
 
 ## 15. The Circuit Model
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn to read a circuit diagram: wires, boxes, meter symbols. **Lv2** you learn the vocabulary of circuits — depth, gate count, connectivity, ancillas — the quantities resource estimates are written in. **Lv3** you can translate between a circuit picture, its unitary matrix, and code. **Lv4** you can design a circuit for a stated goal (a reversible function, a known unitary) and reason about its cost. **Lv5** you understand the circuit model's limits — why it is an abstraction over pulses and topological braids, and where research tries to replace it.
@@ -68,6 +72,8 @@ Since all quantum gates are unitary, all quantum computation is reversible — s
 > Take Qiskit's `qiskit.circuit.library` for a 4-bit adder. Transpile it to a fake backend with heavy-hex connectivity (`qiskit.providers.fake_provider.GenericBackendV2(7)`). Print the original vs. transpiled gate counts and depth. Then generate the coupling map drawing. You should see the gate count grow (SWAP insertion) and depth grow. Vary which physical qubits the circuit is placed on and watch the cost change. This 20-line experiment teaches connectivity economics better than any prose.
 
 ## 16. Quantum Programming
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you write and run your first Qiskit circuits with the simulator. **Lv2** you master the SDK workflow: build, transpile, execute, analyze. **Lv3** you debug quantum programs — with simulators, assertions, and visualization. **Lv4** you can structure quantum code the way you'd structure classical code: testable, layered, honest about noise. **Lv5** you understand where Qiskit ends and the research frontier (pulse control, dynamic circuits, error mitigation frameworks) begins — and what the competing stacks (Cirq, PennyLane, Braket) trade off.
@@ -162,6 +168,8 @@ Quantum code can have real tests. Property-based: your adder oracle satisfies `f
 
 ## 17. Building a Quantum Simulator
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you understand what a simulator must do: apply gates to a state vector, sample outcomes. **Lv2** you build one — single-qubit gates, then controlled gates, then measurement, then a circuit parser. **Lv3** you optimize it: avoid full matrix multiplication, exploit tensor structure, vectorize with numpy. **Lv4** you understand the algorithmic landscape — sparse, stabilizer, tensor networks — and when each wins. **Lv5** you know the frontier: Clifford+T simulation, Pauli propagation, and why simulating 50 good qubits is out of reach *for every computer on Earth*.
 
@@ -251,6 +259,8 @@ The frontier of classical simulation: represent the state as a network of small 
 > Every quantum-advantage claim is answered by a classical simulation advance. Random circuit sampling: Google 2019 claimed 10,000 years → optimized tensor-network methods brought it to minutes (with quality caveats) within two years. The current frontier is simulation of *noisy* circuits (Clifford + few T gates, Pauli perturbation methods), where 2024–25 results show near-term noisy circuits may be easier than clean ones. This matters to you as an engineer: the benchmark to beat is always a moving target, "beyond classical reach" claims decay fast, and the honest resource question is "how much *verified* classical work does the alternative cost?" — a question you are now equipped to ask.
 
 ## Project — Build a Small Quantum Simulator from Scratch
+
+*Author: GLM-5.3*
 
 **Goal.** A pure-numpy state-vector simulator with a text circuit front end, faster than naive kron-multiplication by orders of magnitude, tested against both hand-computed answers and Qiskit.
 

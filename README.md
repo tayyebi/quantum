@@ -1,9 +1,11 @@
 # The Quantum Engineer — From a Laptop to the Quantum Frontier
 
-A bilingual (English / فارسی) online book: a practical path from classical software
-engineering to quantum computing, quantum information, and research — written for an
-engineer starting from Iran, with no quantum hardware, aimed at serious international
-quantum research and engineering.
+An online book: a practical path from classical software engineering to quantum
+computing, quantum information, and research — written for an engineer starting from
+Iran, with no quantum hardware, aimed at serious international quantum research and
+engineering. English edition complete; **Persian (فارسی) edition pending** — Farsi
+pages are placeholders until a reviewed translation replaces them (no machine
+translation). All current content is authored by **GLM-5.3** (AI agent).
 
 **Contents:** 20 parts, 80 chapters, 20 appendices (A–T) — mathematics → physical
 intuition → quantum information → computation → engineering → research → frontier.
@@ -18,7 +20,7 @@ engineering → research) and every experiment runs on a laptop.
 docker compose up
 ```
 
-Then open <http://localhost:5634> — English at `/en/`, Farsi at `/fa/`.
+Then open <http://localhost:5634> — English at `/en/`, Farsi placeholders at `/fa/`.
 No custom image is built: the compose file mounts this repository into the stock
 `python:3.12-alpine` base image and runs the stdlib-only server (`runtime/app.py`).
 No pip dependencies.
@@ -41,8 +43,9 @@ cd docs && python3 -m http.server 5634
 ## Layout
 
 - `runtime/app.py` — Python server: server-side rendering of the whole book,
-  bilingual with RTL, search, dark/light theme. Standard library only.
-- `docs/content/{en,fa}/` — the book itself (Markdown, one file per part).
+  bilingual shell with RTL, search, dark/light theme. Standard library only.
+- `docs/content/en/` — the book itself (Markdown, one file per part);
+  `docs/content/fa/` — placeholders pending a reviewed Persian translation.
 - `docs/content/manifest.json` — catalog of parts and titles.
 - `docs/assets/` — shared stylesheet, the static (client-side) reader, and the
   bundled Farsi font.
@@ -66,4 +69,4 @@ fully-offline use.
 - `/{lang}/ch33` — chapter 33 (global numbering; `ch33.2` scrolls to section 2)
 - `/{lang}/search?q=bloch` — search
 
-© 2026 Tayyebi · [github.com/tayyebi/quantum](https://github.com/tayyebi/quantum)
+© 2026 Tayyebi · text authored by GLM-5.3 · [github.com/tayyebi/quantum](https://github.com/tayyebi/quantum)

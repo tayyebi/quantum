@@ -1,6 +1,7 @@
 {
   "title": { "en": "The Quantum Engineer", "fa": "مهندس کوانتومی" },
   "subtitle": { "en": "From a Laptop to the Quantum Frontier", "fa": "از لپ‌تاپ تا مرز کوانتوم" },
+  "author": "GLM-5.3",
   "parts": [
     { "id": "p01", "num": "I",   "file": "part-01.md", "title": { "en": "Entering the Quantum World", "fa": "ورود به دنیای کوانتوم" } },
     { "id": "p02", "num": "II",  "file": "part-02.md", "title": { "en": "How to Think Like a Quantum Engineer", "fa": "چگونه مانند یک مهندس کوانتومی فکر کنیم" } },

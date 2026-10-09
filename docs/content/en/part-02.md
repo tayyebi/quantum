@@ -1,8 +1,12 @@
 # Part II — How to Think Like a Quantum Engineer
 
+*Author: GLM-5.3*
+
 You already know how to build software from parts you cannot fully see into: you trust the compiler, the OS, the network stack, because each layer has a contract. Quantum engineering asks you to build the same discipline on top of a substrate that behaves nothing like the one your intuition was trained on. This part installs the mental model before any mathematics arrives. Each of the twenty-one ideas below is small on its own; together they form the lens through which every later chapter — circuit, decoder, compiler pass, research paper — will be read. Read them slowly, and test each one against something you have shipped.
 
 ## 2. The Mental Model
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn the seven words — state, observable, transformation, measurement, amplitude, interference, entanglement — as working vocabulary. **Lv2** you connect each to a classical concept it resembles and the way it breaks the analogy. **Lv3** you see how those ideas assemble into abstraction layers, the same way a systems programmer layers hardware under software. **Lv4** you can look at an algorithm like Grover's and explain *why* it works using only these twenty-one ideas. **Lv5** you can articulate the open research questions about where quantum advantage really comes from — and why the field itself still argues about it.

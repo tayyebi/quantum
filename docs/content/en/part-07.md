@@ -1,8 +1,12 @@
 # Part VII — Quantum Algorithms
 
+*Author: GLM-5.3*
+
 The algorithms that justify the field. Nine chapters: the shared paradigm (18), the four oracle algorithms that built it (19–22), the Fourier machinery that makes it scale (23–24), and the two headline results (25–26). Every algorithm gets the same treatment: the problem, the interference story in words, the circuit, a runnable simulation, and the honest cost.
 
 ## 18. The Algorithmic Paradigm
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** a quantum algorithm does not try all answers; it choreographs amplitudes so wrong answers cancel and the right one dominates.
@@ -50,6 +54,8 @@ The analog of random walks: a walker moves on a graph by unitary steps, in discr
 The extraction primitive behind the big results: a state whose amplitudes are *periodic* becomes, after a QFT, a state concentrated on a few basis states — periods become peaks you can sample. The circuit costs only O(n²) gates for N = 2ⁿ dimensions, against O(N log N) for the classical FFT — but read the fine print in 23.7: the QFT consumes a quantum state, not a list of numbers, and returns a state you sample rather than a table. It is the shared skeleton of Simon's algorithm, Shor's period finding, and phase estimation, which is why it gets its own chapter (23) before the algorithms that depend on it.
 
 ## 19. Deutsch's Algorithm
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** one query decides a global property of a 1-bit function because the two possible answers interfere.
@@ -122,6 +128,8 @@ for name, f in oracles.items():
 
 ## 20. Deutsch–Jozsa
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** Deutsch scaled to n bits: 2ⁿ input paths interfere, and all-zeros survives only if f is constant.
 > - **Mathematics —** the amplitude of |0…0⟩ after the circuit is (1/2ⁿ)·Σ_x (−1)^{f(x)}, which is ±1 under the constant case and 0 under the balanced case.
@@ -168,6 +176,8 @@ Quantum: 1 query, O(n) Hadamard gates plus the oracle, success probability exact
 Three limitations, all structural. **The promise**: real functions are neither constant nor balanced, and off-promise the output is arbitrary — no natural computational task arrives in this form. **The oracle**: the speedup assumes Uf costs one "unit"; for any specific promised f you might write down, the classical algorithm could inspect its circuit definition instead of querying it. **The separation type**: it vanishes against randomized classical algorithms (20.5), so the result's lasting value is pedagogical — it introduced the phase-oracle-plus-Hadamards template and the notion of query complexity, which Bernstein–Vazirani and Simon immediately pushed to separations that survive randomization. Treat Deutsch–Jozsa as the field's first exercise, not its first result.
 
 ## 21. Bernstein–Vazirani
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** f(x) = a·x ⊕ b hides a bit string a as a linear form; one quantum query reads a out exactly.
@@ -219,6 +229,8 @@ print(f"recovered a = {y:04b}   expected a = {a:04b}   exact: {y == a}")
 Note the shortcut: with the ancilla tracked analytically as |−⟩, the oracle *is* the diagonal phase `(−1)^{f(x)}` — no 2n-dimensional simulation needed. `Hn` built from kroneckered 2×2 blocks is the Walsh–Hadamard transform, not the FFT; for `f(x) = a·x` over the *bitwise* inner product they differ.
 
 ## 22. Simon's Algorithm
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** find the secret period s of a 2-to-1 function; interference leaves exactly the strings orthogonal to s.
@@ -308,6 +320,8 @@ Frame both algorithms as the **hidden subgroup problem**: given f constant and d
 
 ## 23. Quantum Fourier Transform
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** the quantum DFT: rewrites amplitudes in the frequency basis, so periodic states collapse onto a few sharp peaks.
 > - **Mathematics —** `QFT_N|j⟩ = (1/√N)·Σ_k e^{2πi jk/N}|k⟩`; a unitary built from n Hadamards, n(n+1)/2 controlled rotations, and a swap network.
@@ -378,6 +392,8 @@ print("matches np.fft.ifft * sqrt(N):",
 
 ## 24. Phase Estimation
 
+*Author: GLM-5.3*
+
 > [!levels] Five levels of this chapter
 > - **Intuition —** let the eigenphase wind a clock up by powers of two, then read the clock with an inverse QFT.
 > - **Mathematics —** controlled-U^{2^k} writes e^{2πi·2^k·φ} into a counting register; QFT† concentrates it on the integer nearest 2^t·φ.
@@ -439,6 +455,8 @@ print([(m, round(p[m], 3)) for m in top], "-> phi ≈", top[0] / T)
 > Expect roughly 64% on 175 and 20% on 176 — the nearest integer to 2⁸·0.685 = 175.36 wins but does not dominate. Raise t to 12 and watch the estimate sharpen; that is 24.5's rule working.
 
 ## 25. Grover's Algorithm
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** each iteration rotates the state 2θ toward the marked item; about π/4·√N rotations suffice.
@@ -523,6 +541,8 @@ Count the exposure: one iteration costs the oracle plus O(n) gates; √N iterati
 Rules of thumb from the people who run this. First, exploit classical structure before reaching for Grover — real SAT solvers beat √(2ⁿ) on real instances; Grover is the worst-case guarantee, not the average-case winner. Second, when you do run it, the oracle dominates: co-design the predicate circuit with the diffusion (cancel adjacent H layers, merge rotations, 46.8). Third, prefer amplitude-amplification framings with known p — they compose into larger algorithms. Fourth, if M is unknown, count first (24.7). Fifth, for composability use fixed-point search (Yoder–Low–Chuang), which cannot overshoot, at a modest constant-factor cost. Hardware demonstrations today: a handful of qubits, meaningful as system benchmarks — not as search.
 
 ## 26. Shor's Algorithm
+
+*Author: GLM-5.3*
 
 > [!levels] Five levels of this chapter
 > - **Intuition —** factoring reduces to period finding, and quantum interference finds periods of 2ⁿ-sized tables in one shot.

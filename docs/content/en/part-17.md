@@ -1,8 +1,12 @@
 # Part XVII — The Laboratory You Don't Have
 
+*Author: GLM-5.3*
+
 The book's promise has been implicit so far: real quantum engineering without institutional resources. This part makes it explicit and tactical. Two laboratory tiers are available to you today: the simulation laboratory (unlimited, free, and where 90% of professional quantum engineering actually happens) and the remote-hardware laboratory (real qubits through cloud queues — accessible from anywhere on earth with an internet connection, sanctions included, via the free tiers that exist precisely to be open). A third tier — physical experiments at your desk — is smaller than the hype suggests but larger than skeptics admit, and Chapter 65 maps it honestly: what you can build, what you can't, and when buying equipment is actually worth it.
 
 ## 64. Quantum Computing from a Laptop
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you survey the simulator tiers — state-vector, tensor-network, stabilizer, noisy — and know which answers each can give. **Lv2** you run numerical experiments rigorously on your machine, with statistics. **Lv3** you access real cloud quantum processors and get results worth having despite queues and noise. **Lv4** you benchmark remote hardware honestly — measuring its actual error rates yourself. **Lv5** you combine tiers into full studies — simulate, validate on hardware, quantify the gap — the professional experimental loop, complete.
@@ -47,6 +51,8 @@ Measure the machine yourself — the highest-value laptop-and-cloud skill, becau
 > One integrated exercise using everything in this chapter: pick a GHZ-state decay experiment. (1) Predict: write your expected distribution and decoherence model *before* anything runs (Ch. 59.6). (2) Ideal simulation at n=4,8,12 — exact reference curves. (3) Noisy simulation with a calibration-based noise model — quantify the expected gap. (4) Cloud hardware, n=4 then 8: same circuits, 8192 shots, batched, calibration snapshot saved. (5) Analysis: three curves per n (ideal/noisy/hardware), error bars, gap decomposition (noise-model error vs. unmodeled error — Ch. 64.8's metrology). (6) Publish the notebook (Ch. 62.4). This is a complete, honest, professional-grade experimental study — on free tools, from anywhere on earth.
 
 ## 65. Building Your Own Miniature Quantum Lab
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn what's realistically buildable at home — and what the boundaries are. **Lv2** you do tabletop optics: polarization qubits, interference, entanglement analogues on a budget. **Lv3** you build the classical support crafts — electronics, microwave concepts — that hardware labs actually need. **Lv4** you understand single-photon concepts and where the true-photon experiments begin (and their cost). **Lv5** you decide, with real numbers, when physical equipment is worth it — and what it buys that simulation never can.

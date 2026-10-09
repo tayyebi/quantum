@@ -1,8 +1,12 @@
 # Part XVI — The Career
 
+*Author: GLM-5.3*
+
 The physics doesn't care where you live; unfortunately, parts of the job market do. This part maps the careers the field actually pays for, helps you choose a specialization honestly against your strengths, builds the public technical identity that replaces pedigree, and then confronts the specific situation of moving from Iran into the international ecosystem — with the practical clarity of an engineering constraint, not the weight of a political commentary. Sanctions, visas, and bank transfers are, for you, design constraints: knowable, plannable-around, and utterly determinable in advance. The chapter treats them that way.
 
 ## 60. Quantum Career Map
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn the ten role families and what each actually does day-to-day. **Lv2** you know each role's skill demands and entry paths. **Lv3** you can map your Parts I–XV skills onto role requirements, gap-first. **Lv4** you understand how roles convert into each other over a career — the adjacency graph. **Lv5** you see which roles are growing, which are merging, and which the 2030s hardware transition will create.
@@ -49,6 +53,8 @@ The migration (Ch. 51.10) made real: PQC deployment, crypto-agility engineering,
 
 ## 61. Choosing Your Specialization
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you understand the four axes — software, mathematics, physics, hardware — and which paths sit where. **Lv2** you assess your own strengths honestly against each axis. **Lv3** you understand the hybrid paths — where the field's scarcest profiles live. **Lv4** you choose deliberately, with defensible reasons and a review date. **Lv5** you avoid the premature-specialization trap while still converging — the balance that defines a durable career.
 
@@ -81,6 +87,8 @@ Honest instruments, in order of reliability: (1) *artifact evidence* — what ha
 The tension: convergence is necessary (61.1–61.4) but early locking is expensive because the field itself is unstable — the QEC boom of 2025 didn't exist in 2022 roadmaps' hiring; logical-qubit compiler roles (Ch. 46's research box) barely existed as job titles before Willow. The strategy: *T-shaped with a moving vertical* — broad working fluency across the stack (this book's design), one deep spike chosen now, and an annual re-decision date where you formally ask: is my spike on the field's growth curve (Ch. 60's Lv5 question) and on mine (61.6's evidence)? Switching costs are lowest at interfaces (61.5's hybrids again — a spike *at* an interface is a hedge), and every part of this book's stack-fluency is transferable insurance. Converge deliberately; re-converge annually; never let the spike be the whole identity.
 
 ## 62. Building a Public Technical Identity
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you understand the principle: in a credential-gated field, public artifacts are your credentials. **Lv2** you build the portfolio — GitHub, writing, notebooks — to professional standards. **Lv3** you contribute to open source effectively: from good-first-issues to committership. **Lv4** you engage the community — conferences, correspondence — as a peer. **Lv5** you establish credibility with no institutional affiliation at all, the specific challenge and specific power of your position.
@@ -125,6 +133,8 @@ The synthesis: affiliation substitutes for verification — "trust her, MIT does
 > The field is quietly renegotiating who gets to participate: 2020s remote-work normalization, OSS-first hiring at several quantum companies, arXiv's endorsement mechanics (a genuine bottleneck for unaffiliated authors — endorsement is earned via 62.7's correspondence), and AI-assisted literature access have all lowered the entry toll. Against that, credential inflation is real in tight funding periods. The strategic reading for the unaffiliated: the verification-substitution strategy (62.9) works and is getting cheaper — but the *research-laboratory* experience (Part XVII–XIX's thesis) remains the one thing artifacts cannot fully substitute, which is why Ch. 63.6 and 63.8 treat lab access as its own objective.
 
 ## 63. Moving from Iran into the International Ecosystem
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you get the honest map: which paths are remotely accessible now, which require relocation, and what the actual constraints are. **Lv2** you can plan OSS and academic participation realistically (sanctions-aware). **Lv3** you understand the degree paths — master's, PhD, internships — and their admissions mechanics from your position. **Lv4** you can navigate scholarships, lab access, and immigration pathways with realistic timelines. **Lv5** you manage sanctions and export-control as engineering constraints — knowing exactly what is permitted, what is restricted, and how to stay unambiguously compliant.

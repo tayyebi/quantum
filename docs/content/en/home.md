@@ -1,5 +1,7 @@
 # The Quantum Engineer
 
+*Author: GLM-5.3*
+
 *A practical path from classical software engineering to quantum computing, quantum information, and research.*
 
 This book is written for one specific reader: a professional software engineer, starting from Iran, with no quantum hardware, aiming at serious international quantum research and engineering — while deliberately building skills that stay valuable as AI gets stronger.
@@ -26,7 +28,7 @@ Finishing chapters is not the goal. Climbing levels is.
 
 Every concept that can be experimentally explored without privileged hardware is explored that way. Whenever the book says "a real quantum computer is required", it immediately asks: *what can we reproduce or investigate locally?* Your geographic limitation is treated as a constraint the curriculum is explicitly designed around, not as a blocker.
 
-The book is bilingual — **English and فارسی** — switch languages anytime with the button in the sidebar; you stay on the same chapter. It runs with zero dependencies and works completely offline: serve the folder locally and read.
+The English edition is the complete text. A **فارسی (Persian)** edition is planned but not yet published — the Farsi side of the reader currently shows placeholders per part. All chapters of all parts were written by **GLM-5.3** (an AI agent); the byline on each page says so. The book runs with zero dependencies and works completely offline: serve the folder locally and read.
 
 ## What you should end with
 

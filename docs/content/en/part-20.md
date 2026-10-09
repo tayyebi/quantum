@@ -1,8 +1,12 @@
 # Part XX — The Frontier
 
+*Author: GLM-5.3*
+
 The book taught you a field's present. This part is its edge — the place where the textbook ends and the arXiv listing begins. You are now equipped to read that listing critically (Part XIV), to build in it (Part XVIII), and to know which of its problems are yours (Ch. 55). Chapter 77 maps the machine era beyond NISQ; Chapter 78 the network future; Chapter 79 the true costs of fault-tolerant algorithms; and Chapter 80 — the last chapter — is the honest ledger of what nobody knows, ending where the book's promise ends and your career begins: at the door of a research laboratory.
 
 ## 77. Beyond Noisy Intermediate-Scale Quantum Computing
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you can define NISQ, fault tolerance, and logical qubits precisely. **Lv2** you know the 2024–26 state: below-threshold codes demonstrated, logical qubits real. **Lv3** you understand the scaling architectures and their engineering bottlenecks. **Lv4** you can evaluate memory and networking claims against physics. **Lv5** you can place any roadmap announcement on the NISQ→FTQ transition curve and know what to distrust about it.
@@ -33,6 +37,8 @@ The connective frontier: linking processors with quantum channels — entangleme
 
 ## 78. Quantum Networks
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you learn what quantum communication can and cannot do — no superluminal anything. **Lv2** you understand entanglement distribution and teleportation as network primitives. **Lv3** you grasp the repeater problem — why quantum networks need quantum memories. **Lv4** you can evaluate distributed-computing and quantum-internet proposals critically. **Lv5** you see the open architecture questions — the field's newest systems-design territory.
 
@@ -62,6 +68,8 @@ The end-state vision (Wehner et al.'s staged formulation): a network of networks
 
 ## 79. Fault-Tolerant Algorithms
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you learn why FTQ changes algorithm economics: logical costs, not gate counts, are the currency. **Lv2** you can compute surface-code overhead for a logical qubit from a target error rate. **Lv3** you understand magic-state costs and why T gates dominate. **Lv4** you can run a full resource estimation — algorithm to machine-hours. **Lv5** you can judge algorithmic practicality: which published algorithms could actually run on 2030s machines — and which are asymptotic ornaments.
 
@@ -90,6 +98,8 @@ The filter that separates FTQ-era winners from ornaments, applied to the canon: 
 The systems engineering of machines that don't exist yet: **cryogenics and I/O** (a 10⁶-qubit superconducting machine needs ~10⁵-10⁶ coax lines or cryo-CMOS multiplexing — wiring is the wall before qubits are); **control electronics** (per-qubit waveform generation at scale — FPGA/ASIC economics, Ch. 60.6's field at industrial size); **real-time decoding** (10⁶ physical qubits at µs cycle = 10⁹+ syndrome bits/second to decode in real time — Ch. 37's problem multiplied to datacenter scale; decoder compute may exceed the quantum computer's footprint); **calibration at scale** (per-qubit tune-up doesn't human-scale — automated/ML calibration becomes mandatory infrastructure); **yield and fabrication** (10⁶ qubits at 99.9% gate fidelity means managing a 0.1% defect population — chip-scale binning strategies); and **the compiler stack** (scheduling 10⁹ logical operations across factories and memory — Ch. 46's research box, at operating-system scale; someone will write the FTQ era's first "quantum OS"). Every one of these is a software/systems problem wearing physics clothes — the career map of Part XVI drawn onto the 2030s.
 
 ## 80. The Unknown
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you meet the open problems inventory — the field's honest edge. **Lv2** you understand why the missing architectures and algorithms are missing. **Lv3** you can reason about the physics that could reshape the engineering. **Lv4** you know where classical intuition fails — and where it secretly still works. **Lv5** you finish the book with a direction, not a certificate.

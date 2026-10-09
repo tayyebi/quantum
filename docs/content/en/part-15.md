@@ -1,8 +1,12 @@
 # Part XV — AI × Quantum Computing
 
+*Author: GLM-5.3*
+
 Two technology waves are cresting simultaneously, and you are learning to swim in both. AI is already reshaping how quantum engineering gets done — code generation, literature synthesis, decoder learning, calibration automation — while quantum's own relationship to AI (Part XIII's QML) is a separate, more contested story. This part is written from the working reality of 2026: large language models are standard tools in quantum research groups, and the engineers who thrive are neither AI-avoidant nor AI-dependent, but AI-*literate* — fluent with the tools, clear about their failure modes, and deliberate about which human skills they are compounding. The book's thesis gets its sharpest test here: what should *you* become good at?
 
 ## 56. AI as a Quantum Engineering Tool
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn where AI tools already fit the daily workflow of a quantum engineer. **Lv2** you use them well: prompting for code, math, and literature with verification loops. **Lv3** you build AI-assisted pipelines — experiment generation, debugging, review — with human checkpoints. **Lv4** you know the domain-specific failure modes (plausible-wrong physics, stale knowledge, confident nonsense in notation). **Lv5** you use AI for hypothesis generation — the frontier where the tool becomes a collaborator, with you as the arbiter.
@@ -48,6 +52,8 @@ The research frontier of AI-as-tool, and the one demanding the most from you. Cu
 
 ## 57. What AI Will Automate
 
+*Author: GLM-5.3*
+
 > [!levels] In this chapter
 > **Lv1** you get an honest inventory of what AI already automates in quantum engineering work. **Lv2** you understand the pattern behind automatability: routine, verifiable, well-specified. **Lv3** you can audit your own workflow and classify each activity by automation risk. **Lv4** you can restructure your work to sit above the automation line — designing the verifiable parts for machines and keeping the judgment parts. **Lv5** you see the second-order effects: how automation reshapes the field's job market and research economics, and where new leverage appears.
 
@@ -87,6 +93,8 @@ Automatable: the triage layer — scanning new arXiv listings for relevance, ext
 > List your last month of quantum-engineering hours by activity (coding, reading, experimenting, writing, deciding). Mark each: (a) fully automatable, (b) automatable-with-review, (c) human-core. The pattern you'll find matches this chapter: the (a) pile is your friction — automate it shamelessly; the (b) pile is where AI leverage lives — build the verification loops of Ch. 56; the (c) pile is your career — Ch. 58 tells you how to grow it. Redo the audit quarterly; the piles move, and noticing them move *first* is the meta-skill.
 
 ## 58. What Humans Should Become Good At
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you learn the complementarity principle: train what machines lack, not what they do well. **Lv2** you name the ten durable skills and what each means concretely in quantum work. **Lv3** you self-assess against them with evidence from Parts I–XIV. **Lv4** you build a deliberate practice plan for your weakest three. **Lv5** you understand research taste — the meta-skill that directs all others — and how it is actually acquired.
@@ -135,6 +143,8 @@ The meta-skill: knowing good from merely new, important from merely interesting,
 > Cognitive science hasn't settled what expert intuition *is*; AI hasn't settled whether it can be synthesized from data alone. The practical stakes for you: if taste is trainable pattern-recognition, deliberate exposure (this book's method) suffices; if it involves something stranger — embodied physical intuition, values formed under real stakes — then the laptop-to-lab trajectory (Part XVII) is not optional ornament but the core of the skill. The honest position: act as if both are true. Train the patterns; seek the lab.
 
 ## 59. The AI-Resistant Quantum Engineer
+
+*Author: GLM-5.3*
 
 > [!levels] In this chapter
 > **Lv1** you internalize the distinction: tool users operate what exists; problem solvers decide what should exist. **Lv2** you audit yourself: coding vs engineering vs research — where you sit, where you're going. **Lv3** you learn to interrogate machine output — questions, verification, mathematics. **Lv4** you build experimental intuition and physical-constraint fluency deliberately. **Lv5** you become capable of independent research — the point of the entire book, stated as a checklist.
